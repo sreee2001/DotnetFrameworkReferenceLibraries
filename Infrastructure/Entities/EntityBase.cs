@@ -23,6 +23,11 @@ namespace Infrastructure.Entities
         string ModifiedBy { get; set; }
     }
 
+    public interface ISortable
+    {
+        int? SortOrder { get; set; }
+    }
+
     #endregion
 
     #region POCO classes for Database opereations
@@ -70,6 +75,11 @@ namespace Infrastructure.Entities
             get => _name;
             set => SetField(ref _name, value);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     public abstract class AuditableEntityBase : EntityBaseWithName, IAuditableInformation
@@ -78,6 +88,12 @@ namespace Infrastructure.Entities
         private DateTime? _modifiedOn;
         private string _createdBy;
         private string _modifiedBy;
+
+        protected AuditableEntityBase()
+        {
+            SetAuditInfo();
+        }
+
         public DateTime CreatedOn
         {
             get => _createdOn;
@@ -98,6 +114,18 @@ namespace Infrastructure.Entities
             get => _modifiedBy;
             set => SetField(ref _modifiedBy, value);
         }
+
+        protected void SetAuditInfo()
+        {
+            if (Id == 0)
+            {
+                CreatedBy = Environment.UserName; // This can be replaced with actual user information
+                CreatedOn = DateTime.UtcNow;
+            }
+            ModifiedOn = DateTime.Now;
+            ModifiedBy = Environment.UserName;
+        }
+
     }
     #endregion
 }
