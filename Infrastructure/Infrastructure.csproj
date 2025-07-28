@@ -43,6 +43,7 @@
     <Compile Include="Base\NotifyPropertyBase.cs" />
     <Compile Include="Base\PropertyChangedBase.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
