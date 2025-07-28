@@ -42,8 +42,20 @@
   <ItemGroup>
     <Compile Include="Base\NotifyPropertyBase.cs" />
     <Compile Include="Base\PropertyChangedBase.cs" />
+    <Compile Include="Entities\AuditableEntityBase.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="EntitiesPOCO\PocoAuditableEntityBase.cs" />
+    <Compile Include="EntitiesPOCO\PocoEntityBase.cs" />
+    <Compile Include="EntitiesPOCO\PocoEntityBaseWithName.cs" />
+    <Compile Include="Entities\EntityBaseWithName.cs" />
+    <Compile Include="Entities\SortableEntity.cs" />
+    <Compile Include="Interfaces\IAuditableInformation.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Interfaces\IEditable.cs" />
+    <Compile Include="Interfaces\IEntityBase.cs" />
+    <Compile Include="Interfaces\IEntityBaseWithName.cs" />
+    <Compile Include="Interfaces\ISortable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,5 +64,6 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

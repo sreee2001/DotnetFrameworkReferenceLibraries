@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure.Interfaces;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -24,7 +25,7 @@ namespace Infrastructure.Base
     /// AddErrors method adds a list of errors for the specified property name.
     /// ClearErrors method clears all errors for the specified property name.
     /// </remarks>
-    public abstract class PropertyChangedBase : NotifyPropertyBase
+    public abstract class PropertyChangedBase : NotifyPropertyBase, IEditable
     {
         private readonly ConcurrentDictionary<string, List<string>> _errors = new ConcurrentDictionary<string, List<string>>();
         private bool _isDirty;
