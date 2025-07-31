@@ -47,6 +47,8 @@ namespace Infrastructure.Base
 
         #endregion
 
+        #region Helper Methods
+
         /// <summary>
         /// Raises the PropertyChanged event for the specified property name.
         /// </summary>
@@ -73,6 +75,8 @@ namespace Infrastructure.Base
         {
             ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
         }
+
+        #endregion
 
     }
 }

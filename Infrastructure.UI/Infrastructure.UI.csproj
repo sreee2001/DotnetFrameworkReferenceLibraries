@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2EE34026-4CD5-47A2-95C7-4EB3D19B7352}</ProjectGuid>
+    <ProjectGuid>{06566AC4-6904-4AA0-AF8D-96700F5190A1}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Infrastructure</RootNamespace>
-    <AssemblyName>Infrastructure</AssemblyName>
+    <RootNamespace>Infrastructure.UI</RootNamespace>
+    <AssemblyName>Infrastructure.UI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,34 +37,36 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\NotifyPropertyBase.cs" />
-    <Compile Include="Base\PropertyChangedBase.cs" />
-    <Compile Include="Entities\AuditableEntityBase.cs" />
-    <Compile Include="Entities\Entity.cs" />
-    <Compile Include="Entities\EntityBase.cs" />
-    <Compile Include="EntitiesPOCO\PocoAuditableEntityBase.cs" />
-    <Compile Include="EntitiesPOCO\PocoEntityBase.cs" />
-    <Compile Include="EntitiesPOCO\PocoEntityBaseWithName.cs" />
-    <Compile Include="Entities\EntityBaseWithName.cs" />
-    <Compile Include="Entities\SortableEntity.cs" />
-    <Compile Include="Interfaces\IAmAuditable.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Interfaces\IAmEditable.cs" />
-    <Compile Include="Interfaces\IAmSavable.cs" />
-    <Compile Include="Interfaces\IHaveId.cs" />
-    <Compile Include="Interfaces\IHaveName.cs" />
-    <Compile Include="Interfaces\IAmSortable.cs" />
+    <Compile Include="Behaviors\BringSelectedItemIntoViewBehavior.cs" />
+    <Compile Include="Behaviors\SelectedItemsBehavior.cs" />
+    <Compile Include="Behaviors\TreeViewSelectedItemBehavior.cs" />
+    <Compile Include="Converters\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\InverseBooleanValueConverter.cs" />
+    <Compile Include="Converters\InverseMultiBooleanToVisibilityANDConverter.cs" />
+    <Compile Include="Converters\MultiBooleanToVisibilityANDConverter.cs" />
+    <Compile Include="Converters\StringToDoubleConverter.cs" />
+    <Compile Include="Interfaces\ICanShowViewModel.cs" />
+    <Compile Include="Interfaces\IHaveModel.cs" />
+    <Compile Include="Interfaces\IHaveParent.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{2EE34026-4CD5-47A2-95C7-4EB3D19B7352}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

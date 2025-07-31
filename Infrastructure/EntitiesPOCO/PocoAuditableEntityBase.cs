@@ -4,7 +4,7 @@ using System;
 namespace Infrastructure.EntitiesPOCO
 {
     #region POCO classes for Database opereations
-    public abstract class PocoAuditableEntityBase : PocoEntityBaseWithName, IAuditableInformation
+    public abstract class PocoAuditableEntityBase : PocoEntityBaseWithName, IAmAuditable
     {
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }

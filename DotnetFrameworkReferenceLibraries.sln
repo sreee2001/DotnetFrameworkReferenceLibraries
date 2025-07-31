@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{2EE34026-4CD5-47A2-95C7-4EB3D19B7352}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{BA88B870-3494-4602-A2ED-EB8446B5A32F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.UI", "Infrastructure.UI\Infrastructure.UI.csproj", "{06566AC4-6904-4AA0-AF8D-96700F5190A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BA88B870-3494-4602-A2ED-EB8446B5A32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA88B870-3494-4602-A2ED-EB8446B5A32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA88B870-3494-4602-A2ED-EB8446B5A32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06566AC4-6904-4AA0-AF8D-96700F5190A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06566AC4-6904-4AA0-AF8D-96700F5190A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06566AC4-6904-4AA0-AF8D-96700F5190A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06566AC4-6904-4AA0-AF8D-96700F5190A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

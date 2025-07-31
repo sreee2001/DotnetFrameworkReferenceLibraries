@@ -25,7 +25,7 @@ namespace Infrastructure.Base
     /// AddErrors method adds a list of errors for the specified property name.
     /// ClearErrors method clears all errors for the specified property name.
     /// </remarks>
-    public abstract class PropertyChangedBase : NotifyPropertyBase, IEditable
+    public abstract class PropertyChangedBase : NotifyPropertyBase, IAmEditable
     {
         private readonly ConcurrentDictionary<string, List<string>> _errors = new ConcurrentDictionary<string, List<string>>();
         private bool _isDirty;

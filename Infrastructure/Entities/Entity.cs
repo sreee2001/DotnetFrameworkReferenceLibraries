@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Infrastructure.Entities
+﻿namespace Infrastructure.Entities
 {
     public abstract class Entity : AuditableEntityBase
     {

@@ -5,7 +5,7 @@ namespace Infrastructure.Entities
     /// <summary>
     /// Generic entity class that includes sorting functionality.
     /// </summary>
-    public class SortableEntity : Entity, ISortable
+    public class SortableEntity : Entity, IAmSortable
     {
         private int? _sortOrder;
 

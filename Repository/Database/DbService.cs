@@ -59,6 +59,17 @@ namespace Repository.Database
     //}
 
     //[Export(typeof(IDbService))]
+    
+    /// <summary>
+    /// Provides a base implementation for database services that interact with a specific  <see cref="DbContext"/>
+    /// type. This class simplifies common database operations such as  saving changes, managing entity states, and
+    /// refreshing entities.
+    /// </summary>
+    /// <remarks>This class is designed to be extended by specific database service implementations.  It
+    /// provides a set of utility methods for interacting with the database context,  including methods for saving
+    /// changes, refreshing entities, and managing entity states.</remarks>
+    /// <typeparam name="T">The type of <see cref="DbContext"/> used by the service. Must be a class that derives  from <see
+    /// cref="DbContext"/> and has a parameterless constructor.</typeparam>
     public abstract class DbServiceBase<T> : IDbService where T : DbContext, new()
     {
         [Import]
@@ -78,13 +89,20 @@ namespace Repository.Database
                 ReportValidationErrors(sex);
                 return false;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 //MessagingService.PostMessage(MessageType.Error, e.Message);
                 return false;
             }
         }
 
+        /// <summary>
+        /// Reports validation errors encountered during a database operation.
+        /// </summary>
+        /// <remarks>This method processes the errors contained in the provided <see
+        /// cref="System.Data.SqlClient.SqlException"/>  and formats them into a detailed message. Each error is listed
+        /// with its error number and message.</remarks>
+        /// <param name="sex">The <see cref="System.Data.SqlClient.SqlException"/> containing the validation errors to report.</param>
         private void ReportValidationErrors(SqlException sex) // Fully qualify the SqlException type
         {
             var message = new StringBuilder();

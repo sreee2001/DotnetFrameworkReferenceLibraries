@@ -3,7 +3,7 @@ using System;
 
 namespace Infrastructure.Entities
 {
-    public abstract class AuditableEntityBase : EntityBaseWithName, IAuditableInformation
+    public abstract class AuditableEntityBase : EntityBaseWithName, IAmAuditable
     {
         private DateTime _createdOn;
         private DateTime? _modifiedOn;

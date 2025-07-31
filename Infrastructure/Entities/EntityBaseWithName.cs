@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Entities
 {
-    public abstract class EntityBaseWithName : EntityBase, IEntityBaseWithName
+    public abstract class EntityBaseWithName : EntityBase, IHaveName
     {
         private string _name;
         public string Name

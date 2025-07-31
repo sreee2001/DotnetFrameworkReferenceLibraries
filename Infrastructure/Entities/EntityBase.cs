@@ -5,7 +5,7 @@ namespace Infrastructure.Entities
 {
     #region Entity classes for application domain with change tracking and validation and notification
     
-    public abstract class EntityBase : PropertyChangedBase, IEntityBase
+    public abstract class EntityBase : PropertyChangedBase, IHaveId
     {
         private int _id;
 
