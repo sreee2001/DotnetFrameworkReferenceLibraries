@@ -47,6 +47,7 @@
     <Compile Include="Converters\InverseMultiBooleanToVisibilityANDConverter.cs" />
     <Compile Include="Converters\MultiBooleanToVisibilityANDConverter.cs" />
     <Compile Include="Converters\StringToDoubleConverter.cs" />
+    <Compile Include="Extensions\DependencyObjectFocusExtension.cs" />
     <Compile Include="Interfaces\ICanShowViewModel.cs" />
     <Compile Include="Interfaces\IHaveModel.cs" />
     <Compile Include="Interfaces\IHaveParent.cs" />
