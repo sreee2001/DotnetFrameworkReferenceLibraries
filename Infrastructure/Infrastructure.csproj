@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\NotifyPropertyBase.cs" />
+    <Compile Include="Base\NotifyPropertyChangedBase.cs" />
+    <Compile Include="Base\NotifyPropertyChangingBase.cs" />
+    <Compile Include="Base\NotifyPropertyDataErrorInfoBase.cs" />
     <Compile Include="Base\PropertyChangedBase.cs" />
     <Compile Include="Entities\AuditableEntityBase.cs" />
     <Compile Include="Entities\Entity.cs" />
