@@ -75,7 +75,7 @@ namespace Infrastructure.UI.Converters
         /// <exception cref="NotImplementedException">Thrown if the method is not implemented.</exception>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            return GetVisibility(value);
         }
 
         /// <summary>
